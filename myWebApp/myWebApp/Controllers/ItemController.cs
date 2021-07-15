@@ -34,7 +34,7 @@ namespace myWebApp.Controllers
             Item itemFound = Items.FirstOrDefault(i => i.Id==id);
             if (itemFound ==null)
             {
-                return NotFound(new { Message = "Item Not Found" });
+                return NotFound(new { Message = "Item has not been Not Found" });
             }
             return Ok(itemFound);
         }
