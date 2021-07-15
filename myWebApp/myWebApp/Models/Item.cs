@@ -1,10 +1,10 @@
 ﻿using System;
 namespace myWebApp.Models
 {
-    public class ItemClass
+    public class Item
     {
 
         public int Id { get; set; }
-        public string Item { get; set; }
+        public string ItemName { get; set; }
     }
 }
