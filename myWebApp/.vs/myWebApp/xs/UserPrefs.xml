@@ -1,16 +1,20 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{41385671-6444-41BE-86DB-5C243D90E75F}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="myWebApp/Controllers/ItemController.cs">
     <Files>
       <File FileName="myWebApp/Models/ItemClass.cs" Line="11" Column="1" />
+      <File FileName="myWebApp/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
+      <File FileName="myWebApp/WeatherForecast.cs" Line="1" Column="1" />
+      <File FileName="myWebApp/Controllers/ItemController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="myWebApp" expanded="True">
             <Node name="myWebApp" expanded="True">
-              <Node name="Models" expanded="True">
-                <Node name="ItemClass.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="ItemController.cs" selected="True" />
               </Node>
+              <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
             </Node>
           </Node>
