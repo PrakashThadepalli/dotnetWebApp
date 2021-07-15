@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using myWebApp.Models;
+
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,24 +13,39 @@ namespace myWebApp.Controllers
     [Route("api/[controller]")]
     public class ItemController : Controller
     {
+
+        private List<Item> Items = new List<Item> {
+          new  Item() { Id=1, ItemName="Idly"},
+          new Item() {Id=2, ItemName ="poori"}
+        };
+          
+        
         // GET: api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult<IEnumerable<Item>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return Items;
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public ActionResult<Item> Get(int id)
         {
-            return "value";
+            Item itemFound = Items.FirstOrDefault(i => i.Id==id);
+            if (itemFound ==null)
+            {
+                return NotFound(new { Message = "Item Not Found" });
+            }
+            return Ok(itemFound);
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IEnumerable<Item> Post( Item value)
         {
+            Console.WriteLine(value);
+            Items.Add(value);
+            return Items;
         }
 
         // PUT api/values/5
